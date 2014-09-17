@@ -24,7 +24,7 @@ Credentials *(passwords set at first boot)*
 -  Webmin, SSH: username **root**
 -  PostgreSQL, phpPgAdmin: username **postgres**
 
-.. _Odoo: http://www.turnkeylinux.org/lapp
+.. _Odoo: https://www.odoo.com
 .. _Open Source CRM: https://www.odoo.com/page/crm
 .. _Website Builder: https://www.odoo.com/page/website-builder
 .. _eCommerce: https://www.odoo.com/page/e-commerce
