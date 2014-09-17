@@ -1,0 +1,41 @@
+#!/bin/sh -ex
+
+wget http://gdata-python-client.googlecode.com/files/gdata-2.0.17.tar.gz
+tar -zxvf gdata-2.0.17.tar.gz
+cd gdata-2.0.17
+python setup.py install
+cd ..
+
+echo "------------------------"
+echo " Create a role openuser "
+echo "------------------------"
+/etc/init.d/postgresql start
+su -c - postgres "createuser openuser --no-superuser --createdb --no-createrole" 
+cat > /tmp/openuser_changepass.sql <<"EOF"
+ALTER USER openuser WITH PASSWORD 'openuser';
+EOF
+su -c - postgres "psql template1 -U postgres -f /tmp/openuser_changepass.sql"
+/etc/init.d/postgresql stop
+
+OPENERP_PASS=openerp
+OPENERP_DIR=/opt/openerp
+ODOO_DIR=/opt/openerp/odoo
+
+echo "-------------------------"
+echo " Add system user openerp "
+echo "-------------------------"
+echo | adduser --disabled-password openerp
+usermod -p $(echo $OPENERP_PASS | openssl passwd -1 -stdin) openerp
+echo
+
+echo "--------------------------"
+echo " Create openerp directory "
+echo "--------------------------"
+mkdir $OPENERP_DIR
+chown -R openerp:openerp $OPENERP_DIR
+
+echo "--------------"
+echo " Install Odoo "
+echo "--------------"
+git clone https://github.com/odoo/odoo.git $ODOO_DIR --branch 8.0
+chown -R openerp:openerp $ODOO_DIR
