@@ -1,9 +1,9 @@
-Odoo (formerly OpenERP) - Open Source Apps To Grow Your Business.
-=================================================================
+Odoo (formerly OpenERP)
+=======================
 
 `_Odoo`_ is a suite of web based open source business apps.
 
-It's main apps include an <a href="https://www.odoo.com/page/crm">Open Source CRM</a>, <a href="https://www.odoo.com/page/website-builder">Website Builder</a>, <a href="https://www.odoo.com/page/e-commerce">eCommerce</a>, <a href="https://www.odoo.com/page/project-management">Project Management</a>, <a href="https://www.odoo.com/page/accounting">Billing & Accounting</a>, <a href="https://www.odoo.com/page/point-of-sale">Point of Sale</a>, <a href="https://www.odoo.com/page/employees">Human Resources</a>, Marketing, Manufacturing, Purchase Management, ...  Each application is standalone but you get a full featured <a href="https://www.odoo.com">Open Source ERP</a> if you install several apps as they integrate to each others.
+It's main apps include an `Open Source CRM`_, `Website Builder`_, `eCommerce`_, `Project Management`_, `Billing and Accounting`_, `Point of Sale`_, `Human Resources`_, Marketing, Manufacturing, Purchase Management, ...  Each application is standalone but you get a full featured `Open Source ERP`_ if you install several apps as they integrate to each others.
 
 
 This appliance is based on `LAPP stack`_, presenting the features:
@@ -25,5 +25,13 @@ Credentials *(passwords set at first boot)*
 -  PostgreSQL, phpPgAdmin: username **postgres**
 
 .. _Odoo: http://www.turnkeylinux.org/lapp
+.. _Open Source CRM: https://www.odoo.com/page/crm
+.. _Website Builder: https://www.odoo.com/page/website-builder
+.. _eCommerce: https://www.odoo.com/page/e-commerce
+.. _Project Management: https://www.odoo.com/page/project-management
+.. _Billing and Accounting: https://www.odoo.com/page/accounting
+.. _Point of Sale: https://www.odoo.com/page/point-of-sale
+.. _Human Resources: https://www.odoo.com/page/employees
+.. _Open Source ERP: https://www.odoo.com
 .. _LAPP stack: http://www.turnkeylinux.org/lapp
 .. _PHPPgAdmin: http://phppgadmin.sourceforge.net/
