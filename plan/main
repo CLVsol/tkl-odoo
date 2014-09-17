@@ -30,3 +30,6 @@ python-jinja2
 
 python-pypdf
 python-passlib
+
+python-requests
+python-decorator
