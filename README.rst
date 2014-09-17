@@ -1,13 +1,12 @@
-LAPP - Web Stack (PostgreSQL)
-=============================
+Odoo (formerly OpenERP) - Open Source Apps To Grow Your Business.
+=================================================================
 
-The LAPP stack is an open source web platform that can be used to run
-dynamic web sites and servers. It is considered by many to be a powerful
-alternative to the more popular LAMP stack and includes Linux, Apache,
-PostgreSQL (instead of MySQL) and PHP, Python and Perl.
+`_Odoo`_ is a suite of web based open source business apps.
 
-This appliance includes all the standard features in `TurnKey Core`_,
-and on top of that:
+It's main apps include an <a href="https://www.odoo.com/page/crm">Open Source CRM</a>, <a href="https://www.odoo.com/page/website-builder">Website Builder</a>, <a href="https://www.odoo.com/page/e-commerce">eCommerce</a>, <a href="https://www.odoo.com/page/project-management">Project Management</a>, <a href="https://www.odoo.com/page/accounting">Billing & Accounting</a>, <a href="https://www.odoo.com/page/point-of-sale">Point of Sale</a>, <a href="https://www.odoo.com/page/employees">Human Resources</a>, Marketing, Manufacturing, Purchase Management, ...  Each application is standalone but you get a full featured <a href="https://www.odoo.com">Open Source ERP</a> if you install several apps as they integrate to each others.
+
+
+This appliance is based on `LAPP stack`_, presenting the features:
 
 - SSL support out of the box.
 - PHP, Python and Perl support for Apache2 and PostgreSQL.
@@ -19,15 +18,12 @@ and on top of that:
 - The *postgres* user is trusted when connecting over local unix sockets
   (convenience).
 
-A separate appliance is available for the `LAMP stack`_ (featuring MySQL
-instead of PostgreSQL).
-
 Credentials *(passwords set at first boot)*
 -------------------------------------------
 
 -  Webmin, SSH: username **root**
 -  PostgreSQL, phpPgAdmin: username **postgres**
 
-.. _TurnKey Core: http://www.turnkeylinux.org/core
+.. _Odoo: http://www.turnkeylinux.org/lapp
+.. _LAPP stack: http://www.turnkeylinux.org/lapp
 .. _PHPPgAdmin: http://phppgadmin.sourceforge.net/
-.. _LAMP stack: http://www.turnkeylinux.org/lampstack
