@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <a href="https://<?php print
-                        $_SERVER{'HTTP_HOST'}; ?>:12325"><img
+                        $_SERVER{'HTTP_HOST'}; ?>:12325/web"><img
                         src="images/odoo.png"/>Odoo (https)</a>
                     </div>
                     <div>
