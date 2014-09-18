@@ -30,7 +30,8 @@ Credentials *(passwords set at first boot)*
 Credentials *(passwords set by default)*
 ----------------------------------------
 
--  Odoo: admin **admin**, openuser **openuser**
+-  Odoo Master password: **admin**
+-  Odoo openuser password: **openuser**
 
 .. _Odoo: https://www.odoo.com
 .. _Open Source CRM: https://www.odoo.com/page/crm
