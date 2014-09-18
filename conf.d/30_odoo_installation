@@ -1,10 +1,9 @@
 #!/bin/sh -ex
 
-wget http://gdata-python-client.googlecode.com/files/gdata-2.0.17.tar.gz
-tar -zxvf gdata-2.0.17.tar.gz
-cd gdata-2.0.17
-python setup.py install
-cd ..
+OPENERP_PASS=openerp
+OPENERP_DIR=/opt/openerp
+ODOO_DIR=/opt/openerp/odoo
+ODOO_DIR_TMP=/opt/openerp/odoo_tmp
 
 echo "------------------------"
 echo " Create a role openuser "
@@ -17,21 +16,16 @@ EOF
 su -c - postgres "psql template1 -U postgres -f /tmp/openuser_changepass.sql"
 /etc/init.d/postgresql stop
 
-OPENERP_PASS=openerp
-OPENERP_DIR=/opt/openerp
-ODOO_DIR=/opt/openerp/odoo
-
 echo "-------------------------"
 echo " Add system user openerp "
 echo "-------------------------"
 echo | adduser --disabled-password openerp
 usermod -p $(echo $OPENERP_PASS | openssl passwd -1 -stdin) openerp
-echo
 
 echo "--------------------------"
 echo " Create openerp directory "
 echo "--------------------------"
-mkdir $OPENERP_DIR
+#mkdir $OPENERP_DIR
 chown -R openerp:openerp $OPENERP_DIR
 
 echo "--------------"
@@ -39,3 +33,28 @@ echo " Install Odoo "
 echo "--------------"
 git clone https://github.com/odoo/odoo.git $ODOO_DIR --branch 8.0
 chown -R openerp:openerp $ODOO_DIR
+mv $ODOO_DIR_TMP/* $ODOO_DIR
+rm -rf $ODOO_DIR_TMP
+
+echo "----------------------------"
+echo "  Install Odoo as a service "
+echo "----------------------------"
+chmod 666 /opt/openerp/openerp.init 
+chmod +x /opt/openerp/openerp.init
+cd /etc/init.d
+ln -s /opt/openerp/openerp.init openerp-server
+update-rc.d openerp-server defaults
+touch /var/log/openerp-server.log
+chown openerp /var/log/openerp-server.log
+touch /var/run/openerp-server.pid
+chown openerp /var/run/openerp-server.pid
+cd /opt/openerp
+chown -R openerp:openerp $ODOO_DIR
+
+echo "------------------------"
+echo " Make SSL work properly "
+echo "------------------------"
+a2enmod ssl proxy_http headers rewrite
+a2ensite openerp-ssl
+/etc/init.d/apache2 restart
+

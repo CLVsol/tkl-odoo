@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Style-Type" content="text/css">
         <meta http-equiv="Content-Script-Type" content="text/javascript">
 
-        <title>TurnKey LAPP</title>
+        <title>TurnKeyOdoo</title>
         
         <link rel="stylesheet" href="css/ui.tabs.css" type="text/css" media="print, projection, screen">
         <link rel="stylesheet" href="css/base.css" type="text/css">
@@ -22,7 +22,7 @@
     </head>
 
     <body>
-        <h1>TurnKey LAPP</h1>
+        <h1>TurnKey Odoo</h1>
         
         <div id="container-1">
             <ul>
@@ -46,6 +46,16 @@
                         $_SERVER{'HTTP_HOST'}; ?>:12322"><img
                         src="images/phppgadmin.png"/>PHPPgAdmin</a>
                     </div>
+                    <div>
+                        <a href="https://<?php print
+                        $_SERVER{'HTTP_HOST'}; ?>:12325"><img
+                        src="images/odoo.png"/>Odoo (https)</a>
+                    </div>
+                    <div>
+                        <a href="http://<?php print
+                        $_SERVER{'HTTP_HOST'}; ?>:8069"><img
+                        src="images/odoo.png"/>Odoo (http)</a>
+                    </div>
                     <div></div>
                     <div></div>
 
@@ -59,9 +69,14 @@
                           <a href="/server-status">Apache server status</a>
                           (to disable: a2dismod status)
                         </li>
-                        <li><a
-                        href="http://www.turnkeylinux.org/lapp">
-                        TurnKey LAPP release notes</a></li>
+                        <li>
+                          <a href="https://github.com/CLVsol/tkl-odoo">TurnKey Odoo on GitHub</a>
+                          (CLVsol/tkl-odoo)
+                        </li>
+                        <li>
+                          <a href="https://github.com/odoo">Odoo on GitHub</a>
+                          (formerly OpenERP)
+                        </li>
                     </ul>
 
                 </div>

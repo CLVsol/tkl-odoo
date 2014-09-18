@@ -17,12 +17,20 @@ This appliance is based on `LAPP stack`_, presenting the features:
 - PostgreSQL password encryption enabled by default (security).
 - The *postgres* user is trusted when connecting over local unix sockets
   (convenience).
+- Odoo connection (listening on port 8069).
+- Odoo secured connection (listening on port 12325 - uses SSL).
 
 Credentials *(passwords set at first boot)*
 -------------------------------------------
 
 -  Webmin, SSH: username **root**
 -  PostgreSQL, phpPgAdmin: username **postgres**
+-  Odoo: username **openerp**
+
+Credentials *(passwords set by default)*
+----------------------------------------
+
+-  Odoo: admin **admin**, openuser **openuser**
 
 .. _Odoo: https://www.odoo.com
 .. _Open Source CRM: https://www.odoo.com/page/crm
