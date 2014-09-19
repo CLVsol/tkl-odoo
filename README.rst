@@ -1,4 +1,4 @@
-Odoo 8.0 (formerly OpenERP)
+Odoo 7.0 (formerly OpenERP)
 ===========================
 
 `Odoo`_ is a suite of web based open source business apps.
@@ -18,7 +18,7 @@ This appliance is based on `LAPP stack`_, presenting the features:
   (convenience).
 - Odoo connection (listening on port 8069).
 - Odoo secured connection (listening on port 12325 - uses SSL).
-- Branch installed: **8.0**.
+- Branch installed: **7.0**.
 
 Credentials *(passwords set at first boot)*
 -------------------------------------------
