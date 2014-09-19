@@ -5,7 +5,6 @@ Odoo (formerly OpenERP)
 
 It's main apps include an `Open Source CRM`_, `Website Builder`_, `eCommerce`_, `Project Management`_, `Billing and Accounting`_, `Point of Sale`_, `Human Resources`_, Marketing, Manufacturing, Purchase Management, ...  Each application is standalone but you get a full featured `Open Source ERP`_ if you install several apps as they integrate to each others.
 
-
 This appliance is based on `LAPP stack`_, presenting the features:
 
 - SSL support out of the box.
@@ -19,6 +18,7 @@ This appliance is based on `LAPP stack`_, presenting the features:
   (convenience).
 - Odoo connection (listening on port 8069).
 - Odoo secured connection (listening on port 12325 - uses SSL).
+- Branch installed: **master**.
 
 Credentials *(passwords set at first boot)*
 -------------------------------------------
