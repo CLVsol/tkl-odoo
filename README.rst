@@ -5,7 +5,8 @@ Odoo (formerly OpenERP)
 
 It's main apps include an `Open Source CRM`_, `Website Builder`_, `eCommerce`_, `Project Management`_, `Billing and Accounting`_, `Point of Sale`_, `Human Resources`_, Marketing, Manufacturing, Purchase Management, ...  Each application is standalone but you get a full featured `Open Source ERP`_ if you install several apps as they integrate to each others.
 
-This appliance is based on `LAPP stack`_, presenting the features:
+This appliance is based on `LAPP stack`_, including all the standard features in `TurnKey Core`_,
+and on top of that:
 
 - SSL support out of the box.
 - PHP, Python and Perl support for Apache2 and PostgreSQL.
@@ -18,7 +19,7 @@ This appliance is based on `LAPP stack`_, presenting the features:
   (convenience).
 - Odoo connection (listening on port 8069).
 - Odoo secured connection (listening on port 12325 - uses SSL).
-- Branch installed: **master**.
+- Odoo instaled branch: **master**.
 
 Credentials *(passwords set at first boot)*
 -------------------------------------------
@@ -44,3 +45,4 @@ Credentials *(passwords set by default)*
 .. _Open Source ERP: https://www.odoo.com
 .. _LAPP stack: http://www.turnkeylinux.org/lapp
 .. _PHPPgAdmin: http://phppgadmin.sourceforge.net/
+.. _TurnKey Core: http://www.turnkeylinux.org/core
