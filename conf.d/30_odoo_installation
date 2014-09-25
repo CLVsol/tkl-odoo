@@ -42,13 +42,12 @@ echo "----------------------------"
 chmod 666 /opt/openerp/openerp.init 
 chmod +x /opt/openerp/openerp.init
 cd /etc/init.d
-ln -s /opt/openerp/openerp.init openerp-server
+ln -s $OPENERP_DIR/openerp.init openerp-server
 update-rc.d openerp-server defaults
 touch /var/log/openerp-server.log
 chown openerp /var/log/openerp-server.log
 touch /var/run/openerp-server.pid
 chown openerp /var/run/openerp-server.pid
-cd /opt/openerp
 chown -R openerp:openerp $ODOO_DIR
 
 echo "------------------------"
@@ -56,5 +55,3 @@ echo " Make SSL work properly "
 echo "------------------------"
 a2enmod ssl proxy_http headers rewrite
 a2ensite openerp-ssl
-/etc/init.d/apache2 restart
-
