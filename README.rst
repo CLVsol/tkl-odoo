@@ -17,7 +17,7 @@ and on top of that:
 - PostgreSQL password encryption enabled by default (security).
 - The *postgres* user is trusted when connecting over local unix sockets
   (convenience).
-- `Odoo`_ instaled branch: **master**.
+- `Odoo`_ instaled branch: **8.0**.
 - Odoo connection (listening on port 8069).
 - Odoo secured connection (listening on port 12325 - uses SSL).
 - Webmin module for configuring Samba.
