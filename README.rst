@@ -17,14 +17,29 @@ and on top of that:
 - PostgreSQL password encryption enabled by default (security).
 - The *postgres* user is trusted when connecting over local unix sockets
   (convenience).
+- `Odoo`_ instaled branch: **master**.
 - Odoo connection (listening on port 8069).
 - Odoo secured connection (listening on port 12325 - uses SSL).
-- Odoo instaled branch: **master**.
+- Webmin module for configuring Samba.
+- File server (`Samba`_) configurations:
+   - Preconfigured wordgroup: WORKGROUP
+   - Preconfigured netbios name: FILESERVER
+   - Configured Samba and UNIX users/groups synchronization (CLI and
+     Webmin).
+   - Configured root as administrative samba user.
+   - Configured shares:
+      - Users home directory.
+      - Public storage.
+      - CD-ROM with automount and umount hooks (/media/cdrom).
+- Default storage: */srv/storage*
+- Accessing file server via samba on the command line::
+    smbclient //1.0.0.61/storage -Uroot
+    mount -t cifs //1.0.0.61/storage /mnt -o username=root,password=PASSWORD
 
 Credentials *(passwords set at first boot)*
 -------------------------------------------
 
--  Webmin, SSH: username **root**
+-  Webmin, Webshell, SSH, Samba: username **root**
 -  PostgreSQL, phpPgAdmin: username **postgres**
 -  Odoo: username **openerp**
 
@@ -46,3 +61,4 @@ Credentials *(passwords set by default)*
 .. _LAPP stack: http://www.turnkeylinux.org/lapp
 .. _PHPPgAdmin: http://phppgadmin.sourceforge.net/
 .. _TurnKey Core: http://www.turnkeylinux.org/core
+.. _Samba: http://www.samba.org/samba/what_is_samba.html
