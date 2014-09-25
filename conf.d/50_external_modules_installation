@@ -1,0 +1,23 @@
+#!/bin/sh -ex
+
+OCA_VERTICAL_DIR=/opt/openerp/oca_medical
+OCA_SERVER_TOOLS_DIR=/opt/openerp/oca_server_tools
+HIVAM_DOCTOR_DIR=/opt/openerp/hivam_doctor
+
+echo "---------------------"
+echo " Install OCA Medical "
+echo "---------------------"
+git clone https://github.com/OCA/vertical-medical.git $OCA_VERTICAL_DIR --branch 7.0
+chown -R openerp:openerp $OCA_VERTICAL_DIR
+
+echo "--------------------------"
+echo " Install OCA Server Tools "
+echo "--------------------------"
+git clone https://github.com/OCA/server-tools.git $OCA_SERVER_TOOLS_DIR --branch 7.0
+chown -R openerp:openerp $OCA_SERVER_TOOLS_DIR
+
+echo "----------------------"
+echo " Install Hivam Doctor "
+echo "----------------------"
+git clone https://github.com/hivam/doctor.git $HIVAM_DOCTOR_DIR
+chown -R openerp:openerp $HIVAM_DOCTOR_DIR

@@ -1,16 +1,37 @@
 #!/bin/sh -ex
 
-CLVSOL_ODOO_ADDONS_DIR=/opt/openerp/clvsol_odoo_addons
-CLVSOL_ODOO_SOLUTIONS_DIR=/opt/openerp/clvsol_odoo_solutions
+CLVSOL_OEHEALTH_ICHU_DIR=/opt/openerp/clvsol_oehealth_ichu
+CLVSOL_OEHEALTH_DIR=/opt/openerp/clvsol_oehealth
+CLVSOL_L10N_BROEHEALTH_DIR=/opt/openerp/clvsol_l10n_br_oehealth
+CLVSOL_OEHEALTH_GS_DIR=/opt/openerp/clvsol_oehealth_gs
+CLVSOL_OEHEALTH_GM_DIR=/opt/openerp/clvsol_oehealth_gm
+
+echo "------------------------------"
+echo " Install CLVsol OeHealth ICHU "
+echo "------------------------------"
+git clone https://github.com/CLVsol/oehealth_ichu.git $CLVSOL_OEHEALTH_ICHU_DIR
+chown -R openerp:openerp $CLVSOL_OEHEALTH_ICHU_DIR
+
+echo "-------------------------"
+echo " Install CLVsol OeHealth "
+echo "-------------------------"
+git clone https://github.com/CLVsol/oehealth.git $CLVSOL_OEHEALTH_DIR
+chown -R openerp:openerp $CLVSOL_OEHEALTH_DIR
+
+echo "---------------------------------"
+echo " Install CLVsol l10n_br OeHealth "
+echo "---------------------------------"
+git clone https://github.com/CLVsol/l10n_br_oehealth.git $CLVSOL_L10N_BROEHEALTH_DIR
+chown -R openerp:openerp $CLVSOL_L10N_BROEHEALTH_DIR
 
 echo "----------------------------"
-echo " Install CLVsol Odoo Addons "
+echo " Install CLVsol OeHealth GS "
 echo "----------------------------"
-git clone https://github.com/CLVsol/odoo_addons.git $CLVSOL_ODOO_ADDONS_DIR
-chown -R openerp:openerp $CLVSOL_ODOO_ADDONS_DIR
+git clone https://github.com/CLVsol/oehealth_gs.git $CLVSOL_OEHEALTH_GS_DIR
+chown -R openerp:openerp $CLVSOL_OEHEALTH_GS_DIR
 
-echo "-------------------------------"
-echo " Install CLVsol Odoo Solutions "
-echo "-------------------------------"
-git clone https://github.com/CLVsol/odoo_solutions.git $CLVSOL_ODOO_SOLUTIONS_DIR
-chown -R openerp:openerp $CLVSOL_ODOO_SOLUTIONS_DIR
+echo "----------------------------"
+echo " Install CLVsol OeHealth GM "
+echo "----------------------------"
+git clone https://github.com/CLVsol/oehealth_gm.git $CLVSOL_OEHEALTH_GM_DIR
+chown -R openerp:openerp $CLVSOL_OEHEALTH_GM_DIR
